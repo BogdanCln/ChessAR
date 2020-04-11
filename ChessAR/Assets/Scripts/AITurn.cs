@@ -4,23 +4,35 @@ using UnityEngine;
 
 public class AITurn : MachineState
 {
-    private bool enabled = false;
-
-    void Start()
+    void Start() { }
+    public static int GetPieceEvaluation(PieceType type)
     {
+        switch (type)
+        {
+            case PieceType.Queen: return -900;
+            case PieceType.King: return -90;
+            case PieceType.Rook: return -50;
+            case PieceType.Knight: return -30;
+            case PieceType.Bishop: return -30;
+            case PieceType.Pawn: return -10;
+            default: return 0;
+        }
     }
-
     public void EnterState()
     {
-        this.enabled = true;
+        enabled = true;
 
         Simulator currentTable = new Simulator(GameManager.instance.pieces, GameManager.instance.movedPawns,
                                                 GameManager.instance.currentPlayer, GameManager.instance.otherPlayer);
 
         GameObject piece = null;
         Vector2Int move = Vector2Int.zero;
-        foreach (var pcs in currentTable.currentPlayer.pieces)
+        foreach (GameObject pcs in currentTable.currentPlayer.pieces)
         {
+            // Piece pieceComponent = pcs.GetComponent<Piece>();
+            // Debug.Log(pieceComponent.type);
+            // Debug.Log(GetPieceEvaluation(pieceComponent.type));
+
             List<Vector2Int> moves = currentTable.MovesForPiece(pcs);
             if (moves.Count > 0)
             {
@@ -36,9 +48,9 @@ public class AITurn : MachineState
 
     private void ExitState()
     {
-        if (this.enabled)
+        if (enabled)
         {
-            this.enabled = false;
+            enabled = false;
             GameManager.instance.NextPlayer();
             GetComponent<PlayerRoutineSelection>().EnterState();
         }
@@ -46,6 +58,6 @@ public class AITurn : MachineState
 
     public override void CancelState()
     {
-        this.enabled = false;
+        enabled = false;
     }
 }
