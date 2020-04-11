@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Simulator : MonoBehaviour
+public class Simulator
 {
     // Sa nu lucrezi pe referintele de la pieces and movedPawns, ele sunt legate de tabla reala
-    private GameObject[,] pieces;
-    private List<GameObject> movedPawns;
+    public GameObject[,] pieces;
+    public List<GameObject> movedPawns;
 
     public Player currentPlayer;
     public Player otherPlayer;
