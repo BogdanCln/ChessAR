@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class AITurn : MachineState
 {
+    private bool enabled = false;
+
     void Start()
     {
     }
@@ -34,9 +36,9 @@ public class AITurn : MachineState
 
     private void ExitState()
     {
-        if (enabled)
+        if (this.enabled)
         {
-            enabled = false;
+            this.enabled = false;
             GameManager.instance.NextPlayer();
             GetComponent<PlayerRoutineSelection>().EnterState();
         }
@@ -44,6 +46,6 @@ public class AITurn : MachineState
 
     public override void CancelState()
     {
-        enabled = false;
+        this.enabled = false;
     }
 }
