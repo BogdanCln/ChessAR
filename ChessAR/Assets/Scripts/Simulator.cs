@@ -65,10 +65,10 @@ public class Simulator
     public void CapturePieceAt(Vector2Int gridPoint)
     {
         GameObject pieceToCapture = PieceAtGrid(gridPoint);
-        if (pieceToCapture.GetComponent<Piece>().type == PieceType.King)
-        {
-            Debug.Log(currentPlayer.name + " wins!");
-        }
+        //if (pieceToCapture.GetComponent<Piece>().type == PieceType.King)
+        //{
+        //    Debug.Log(currentPlayer.name + " wins!");
+        //}
         // Nu era in GameManager
         otherPlayer.pieces.Remove(pieceToCapture);
         currentPlayer.capturedPieces.Add(pieceToCapture);
