@@ -150,7 +150,7 @@ namespace GoogleARCore.Examples.HelloAR
                         gameObject.transform.parent = anchor.transform;
 
                         // ASA AICI SE POT TRIMITE PARAMETRII DE INSTANTIERE A JOCULUI
-                        GameSettings gameSettings = new GameSettings(PiecesColor.black, Difficulty.easy);
+                        GameSettings gameSettings = MainMenu.Settings;
                         gameObject.SendMessage("StartGame", gameSettings);
 
                         m_IsInstantiated = true;
@@ -166,10 +166,11 @@ namespace GoogleARCore.Examples.HelloAR
         private void _UpdateApplicationLifecycle()
         {
             // Exit the app when the 'back' button is pressed.
+            /*
             if (Input.GetKey(KeyCode.Escape))
             {
                 Application.Quit();
-            }
+            }*/ // BACK deschide meniul
 
             // Only allow the screen to sleep when not tracking.
             if (Session.Status != SessionStatus.Tracking)

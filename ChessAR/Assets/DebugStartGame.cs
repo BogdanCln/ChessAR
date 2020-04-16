@@ -7,7 +7,7 @@ public class DebugStartGame : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameSettings gameSettings = new GameSettings(PiecesColor.black, Difficulty.easy);
+        GameSettings gameSettings = MainMenu.Settings;
         GameManager.instance.SendMessage("StartGame", gameSettings);
     }
 
