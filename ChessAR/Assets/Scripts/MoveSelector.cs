@@ -13,6 +13,10 @@ public class MoveSelector : MachineState
     private List<Vector2Int> moveLocations;
     private List<GameObject> locationHighlights;
 
+    bool shouldSelectPawn;
+    GameObject pawn;
+    Vector2Int pwn_position;
+
     void Start()
     {
         tileHighlight = Instantiate(tileHighlightPrefab);
@@ -20,6 +24,15 @@ public class MoveSelector : MachineState
         tileHighlight.transform.localScale = .14f * Vector3.one;
         tileHighlight.transform.localPosition = Geometry.PointFromGrid(new Vector2Int(0, 0));
         tileHighlight.SetActive(false);
+
+        shouldSelectPawn = false;
+    }
+
+    public void TriggerPawnSelection(GameObject pawn, Vector2Int pos)
+    {
+        this.pawn = pawn;
+        this.pwn_position = pos;
+        shouldSelectPawn = true;
     }
 
     /*    void Update()
@@ -131,13 +144,22 @@ public class MoveSelector : MachineState
             tileHighlight.SetActive(false);
             GameManager.instance.DeselectPiece(movingPiece);
             movingPiece = null;
-            GameManager.instance.NextPlayer();
             foreach (GameObject highlight in locationHighlights)
             {
                 Destroy(highlight);
             }
-            PlayerRoutineSelection routine = GetComponent<PlayerRoutineSelection>();
-            routine.EnterState();
+
+            if (shouldSelectPawn)
+            {
+                GetComponent<PickingChoiceState>().EnterState(pawn, pwn_position);
+                shouldSelectPawn = false;
+            }
+            else
+            {
+                GameManager.instance.NextPlayer();
+                PlayerRoutineSelection routine = GetComponent<PlayerRoutineSelection>();
+                routine.EnterState();
+            }
         }
     }
 

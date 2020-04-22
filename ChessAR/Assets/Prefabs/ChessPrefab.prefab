@@ -178,6 +178,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tileHighlightPrefab: {fileID: 1341371675672656, guid: 932e0823114733c49acbd0ef9c7319be,
     type: 3}
+--- !u!114 &1024970354898244321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6323568337938539062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f322d8ab2bcd6764ea5e5291cdc71d7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &6075046504903217575
 PrefabInstance:
   m_ObjectHideFlags: 0

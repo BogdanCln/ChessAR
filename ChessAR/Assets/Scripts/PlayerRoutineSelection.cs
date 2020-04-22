@@ -12,17 +12,7 @@ public class PlayerRoutineSelection : MachineState
     {
         enabled = true;
 
-        bool pat = true;
-
-        foreach(var piece in GameManager.instance.currentPlayer.pieces)
-        {
-            if (GameManager.instance.MovesForPiece(piece).Count > 0)
-            {
-                pat = false;
-                break;
-            }
-        }
-        if (pat) GameManager.instance.DeclarePat();
+        
 
         ExitState(GameManager.instance.currentPlayer.AI);
     }
