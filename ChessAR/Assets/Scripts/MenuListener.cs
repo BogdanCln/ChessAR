@@ -27,8 +27,16 @@ public class MenuListener : MonoBehaviour
 
     public void RestartGame()
     {
-        GameManager.instance.RestartGame(GameManager.instance.settings);
+        try
+        {
+            GameManager.instance.RestartGame(GameManager.instance.settings);
+        }
+        catch { }
+
         ToggleGameMenu();
+
+        FindInActiveObjectByName("CanvasWin").SetActive(false);
+        FindInActiveObjectByName("CanvasDefeat").SetActive(false);
         /*
         Scene scene = SceneManager.GetActiveScene();
         SceneManager.LoadScene(scene.name);

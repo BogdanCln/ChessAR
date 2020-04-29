@@ -419,9 +419,13 @@ public class GameManager : MonoBehaviour
     public void DeclareWin(Player p)
     {
         Debug.Log(p.name + " wins!");
-        MenuListener.ShowMessage(p.name + " wins!", 120);
+        //MenuListener.ShowMessage(p.name + " wins!", 120);
         // COMPLETARE AICI CU UI
-        RestartGame(settings);
+        //RestartGame(settings);
+        if (p.AI)
+            MenuListener.FindInActiveObjectByName("CanvasLose").SetActive(true);
+        else
+            MenuListener.FindInActiveObjectByName("CanvasWin").SetActive(true);
     }
 
     public void DeclarePat()
