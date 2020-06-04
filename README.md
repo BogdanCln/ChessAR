@@ -1,6 +1,6 @@
 # ChessAR
  ## What this project is about
- #### Chess Ar is an augmented reality game implemented using Unity. It allows Android users to play chess against a chess engine.
+ #### ChessAR is an augmented reality game implemented using Unity. It allows Android users to play chess against a chess engine.
  ## Diagrams
  ![alt text](Diagrame/Diagrama-full.png)
  ## Permission
