@@ -1,6 +1,6 @@
 # ChessAR
  ## Despre ce e vorba in acest joc
- #### ChessAR e un joc e realitate augmentata implementat in Unity. El permite utilizatorilor Android sa joace sah, impotriva utilizand o metoda a inteligentei artificiale.
+ #### ChessAR e un joc de realitate augmentata implementat in Unity. El permite utilizatorilor Android sa joace sah, impotriva utilizand o metoda a inteligentei artificiale.
  ## Demo
  
  ## Diagrama
