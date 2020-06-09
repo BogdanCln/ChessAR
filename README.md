@@ -26,6 +26,8 @@
 #### Are aceleasi reguli ca obisnuitul joc de sah.
 #### Daca nu stii sa joci sah, poti arunca o privire [aici](https://www.chess.com/learn-how-to-play-chess).
 ## Plan de testare
-#### Tetare manuala. Fiecare caracteristica a fost testata pe editorul Unity dupa implementare, de asemenea de pe multe dispozitive Android, folosind un build de dezvoltare.
+#### Ca tip de testare am folosit doar testarea manuala.
+#### Fiecare componenta a fost testata atat intermediul editorului Unity dupa implementare, dar si pe mai multe dispozitive Android, prin intermediul unor build-uri de dezvoltare.
+
 ## Prezentare generala
-<img src="Screenshot_20200604_074056_com.FMI.ChessAR.jpg" height=500>
+<img src="Screenshot_20200604_074056_com.FMI.ChessAR.jpg" height=400>
