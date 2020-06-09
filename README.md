@@ -9,7 +9,7 @@
  ### Trebuie sa permiti accesul la camera foto.
  ## Caracteristici
  * ecran care se roteste
- * rapiditate care depinde de utilizato0
+ * rapiditate care depinde de utilizator
  * poti alege dificultatea
  * poti alege culoarea alb sau negru
  * meniu reia, restart, inchide 
