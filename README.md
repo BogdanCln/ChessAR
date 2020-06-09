@@ -9,7 +9,9 @@
  ### Trebuie sa permiti accesul la camera foto.
  ## Caracteristici
  * ecran care se roteste
- * rapiditate care depinde de utilizator
+ * rapiditate care depinde de utilizato0
+ * poti alege dificultatea
+ * poti alege culoarea alb sau negru
  * meniu reia, restart, inchide 
  * iti arata o posibila miscare
  * jucatorului nu ii este permis sa faca miscari invalide
