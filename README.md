@@ -2,7 +2,7 @@
  ## Despre ce e vorba in acest joc
  #### ChessAR e un joc de realitate augmentata implementat in Unity. El permite utilizatorilor Android sa joace sah, fiind utilizat un algoritm al inteligentei artificiale, mai exact algoritmul min max, neoptimizat.
  ## Demo
- #### Un demo al jocului se gaseste [aici]().
+ #### Un demo al jocului se gaseste [aici](https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutu.be%2FvWWJhVk0qjQ%3Ffbclid%3DIwAR0kitdp5zPROEmzQU8IbbWzDMDNfrrRgQBdF7gmyDKXrdQRtk7xAxGpIyc&h=AT020lchsROGvIPM1yhaz7hRLsZk59S91JVP1PfQ1eqonZ_j_Sqr15iXnkFycyjzPlaUZ71brcpaiY7JyuIFEiQ3BFwD1k0xcVa9-O0HCBD8WuQ6GqFxIXgy1B9ivCQe7eW_Kg).
  ## Diagrama
  ![alt text](Diagrame/Diagrama-full.png)
  ## Permisiuni
